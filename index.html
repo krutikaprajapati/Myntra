@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Online Shopping for Women, Men, Kids Fashion & LifeStyle-Myntra</title>
+    <link rel="shortcut icon" href="./assets/myntra.ico" type="image/x-icon">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg p-2" style="width: 100%;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <NavLink className="navbar-brand mx-auto" to="/">
+                    <!-- <h4>Crafting Social Minds</h4> -->
+                    <img width="120"
+                        src="data:image/png;base64,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">
+
+                </NavLink>
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link m-2" href="#">MEN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-2" href="#">WOMEN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-2" href="#">KIDS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-2" href="#">HOME&nbsp;&&nbsp;LIVING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-2" href="#">BEAUTY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-2" href="#">STUDIO<sup>NEW</sup></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <form class="d-flex m-2" role="search">
+                        <button type="submit" class="btn seachButton"><i class=" fa fa-search"></i></button>
+                        <input class="form-control searchbar me-2" type="search"
+                            placeholder="Search for products , brands and more" aria-label="Search">
+                    </form>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item m-2 justify-content-center">
+                            <!-- <iconify-icon icon="akar-icons:person"></iconify-icon> -->
+
+                            <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user-o"
+                                    aria-hidden="true"></i>
+                                <br>Profile</a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-heart-o"
+                                    aria-hidden="true"></i><br>Wishlist</a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link" href="#">&nbsp;&nbsp;<i class="fa fa-shopping-bag"></i><br>Bag</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row m-0" style="width: 100%;">
+                <img src="assets/images/home.jpeg">
+                <img src="assets/images/images2.jpeg">
+            </div>
+
+
+            <div class="row mt-3" style="width: 100% ;margin: 0 auto;">
+                <div class="col-md-12 text-center">
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/7571faeb-1b1b-4e68-9e20-d02d9708be421678254966617-Ace_your_base_Make-up_-_Min_40_off-_faces_canada_and_colorbar.jpg" />
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/051f30bb-ffe2-4c05-aee2-2b8049eefdd91678254966782-Best_selling_ethnic_wear_brands_at_Min_60_off_from_Libas-_varan.jpg" />
+                    <img class="imgcards" style="height: auto;"
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/d38a63dc-2dd3-4288-baa2-be9ec8cf6f3b1678254966795-Bestselling_Lingerie_by_top_brands_starting_-_199_-499-_-_Dress.jpg" />
+                    <img class="imgcards" style="height: auto;"
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/844f6e6b-56ed-4f25-95b3-d4d0b86ee9421678254966821-Budget_buys_Women-s_Footwear_Under_799_1499.png" />
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/fa492da2-276e-4110-8e4f-7b4aeebade681678254966832-Budget_Makeup_Finds_Under_499-_Mars_-_Incolor_-_Miss_claire_and.jpg" />
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/9833a48a-e10e-4a0c-bdc6-5742b8300e841678254966845-Campus-_Columbus_-_more_Upto_50_.png" />
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/c137b4f1-2cb0-46f8-9efb-1331e8d9d5bb1678254966857-Casual_Shorts_50-70_HL-_M-H.png" />
+                </div>
+            </div>
+            <div class="row" style="width: 100% ;margin: 0 auto;">
+                <div class="col-md-12 text-center">
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/22879c15-e4c6-419f-8e01-603266ce59691678254966871-Chupps-_Neemans_-_more_Sustainable_Footwear_Min_30_Off.png" />
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/c137b4f1-2cb0-46f8-9efb-1331e8d9d5bb1678254966857-Casual_Shorts_50-70_HL-_M-H.png" />
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/22879c15-e4c6-419f-8e01-603266ce59691678254966871-Chupps-_Neemans_-_more_Sustainable_Footwear_Min_30_Off.png" />
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/10/6e3c6a07-8dd7-4c31-be2c-be20200fb5171678432171657-image_png_534401051.png" />
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/10/f175901a-1c26-4f54-bc54-8aa2eeefdd441678428850030-unnamed---2023-03-10T114359.178.png" />
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/4aec1dcb-634e-4ba1-bd6d-90424d9ef9801678254966923-Crocs-__-_Upto_50_off.png" />
+                    <img class="imgcards" style="height: auto; "
+                        src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/df096fcb-2d11-428b-9f7f-5f705488a2801678254966948-Defacto-_Zalora_upto_60.png" />
+                </div>
+            </div>
+            <div class="row mt-3" style="width: 100%;">
+                <img src="assets/images/images3.jpeg">
+            </div>
+            <div style="display: flex; flex-wrap: wrap;" class="mt-3">
+                <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/10/0d366df6-d4d4-4ca5-9592-0ddbf7d4466b1678420069446-image_png_1720618207.png"
+                    style="width: 10%; ">
+                <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/060daeac-13f1-491a-b225-fee2738061141678260597449-Effective_Personal_Care.png"
+                    style="width: 10%; ">
+                <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/478655a4-14eb-4699-b13f-9f63e540e5f11678260597346-Bedsheets.png"
+                    style="width: 10%; ">
+                <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/f708724c-54c1-44b4-bcd5-c0e831ada7441678260597357-Bella_Vita-_TAC_-_more.png"
+                    style="width: 10%; ">
+                <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/f64bfab7-b412-4631-96cf-946fc35ba0e91678260597481-Kitchen_Essentials.png"
+                    style="width: 10%; ">
+                <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/372451a1-252a-44a0-8173-039c276622901678260597382-Bestselling_Innerwear.png"
+                    style="width: 10%; ">
+                <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/9425f01c-15fe-404c-94c8-b9cd047374c41678260597373-Best_Of_Teens_Wear.png"
+                    style="width: 10%; ">
+                <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/2bddd1b2-bcc2-43cd-a727-9e0cbc7ffdd81678260597389-Blankets_-_Quilts_.png"
+                    style="width: 10%; ">
+                <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/882cb328-a157-4163-8026-78f0c94d5e6e1678260597397-Blue_heaven-_Sugar_pop.png"
+                    style="width: 10%; ">
+                <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2023/3/8/c133aa3a-673e-4e6a-9692-fcea26a72fce1678260597404-Bombay_Shaving_Company-_Bombae.png"
+                    style="width: 10%; ">
+            </div>
+            <div class="row mt-4" style="width: 100%;">
+                <img src="assets/images/images4.jpeg">
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap;" class="mt-3">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/6250067b-6c41-4224-af30-cab2ea8c201f1682664914475-ShopByCategory_HP_02.jpg"
+                    style="width: 16.66%;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/b5c558e4-270f-4de0-8801-3c10be19ad901682664914485-ShopByCategory_HP_03.jpg"
+                    style="width: 16.66%;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/ce421337-2d46-40e9-aeb3-12b83ca75e351682664914494-ShopByCategory_HP_04.jpg"
+                    style="width: 16.66%;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/c7317554-8be5-4c77-84ea-19ba531a31df1682664914505-ShopByCategory_HP_05.jpg"
+                    style="width: 16.66%;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/e0d78e9f-ab28-4803-bd4d-3c9a5cc040581682664914516-ShopByCategory_HP_06.jpg"
+                    style="width: 16.66%;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/281c9e33-1500-4a21-8e66-822bf6cdaf321682664914528-ShopByCategory_HP_07.jpg"
+                    style="width: 16.66%;">
+            </div>
+            <div style="display: flex; flex-wrap: wrap;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/9834194d-0898-4285-95a1-3ce709f30ea01682664914604-ShopByCategory_HP_14.jpg"
+                    style="width: 16.66%;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/a1e05750-a1c5-4202-babb-95bdf1eb871d1682664914613-ShopByCategory_HP_15.jpg"
+                    style="width: 16.66%;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/c5328f6d-0be1-4924-aa4e-dc71a040d9171682664914622-ShopByCategory_HP_16.jpg"
+                    style="width: 16.66%;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/24e12e45-3a3d-46ab-8ea5-b5fdf06815d41682664914632-ShopByCategory_HP_17.jpg"
+                    style="width: 16.66%;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/b739873d-01fa-4d9e-874e-039be79b862e1682664914641-ShopByCategory_HP_18.jpg"
+                    style="width: 16.66%;">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2023/4/28/e3621a06-2d0a-489f-b930-9e10106a1c3c1682664914651-ShopByCategory_HP_19.jpg"
+                    style="width: 16.66%;">
+            </div>
+        </div>
+    </section>
+    <footer class="bg-light p-4 mt-5">
+        <div class="row" style="width: 100%;">
+            <div class="col-md-2">
+                <p class="font-weight-bold h6">ONLINE SHOPPING</p>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+                <a href="#">Beauty</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Myntra Incider</a>
+
+                <p class="font-weight-bold h6 mt-3">USEFUL LINKS</p>
+                <a href="#">Blog</a>
+                <a href="#">Careers</a>
+                <a href="#">Site Map</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Whitehat</a>
+            </div>
+            <div class="col-md-2">
+                <P class="font-weight-bold h6">CUSTOMER POLICIES</P>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQ</a>
+                <a href="#">T&C</a>
+                <a href="#">Terms of use</a>
+                <a href="#">Track Orders</a>
+                <a href="#">shipping</a>
+                <a href="#">Cancellation</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="col-md-4">
+                <P class="font-weight-bold h6">EXPERIENCE MYNTRA APP ON MOBILE</P>
+                <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+                    <img width="120"
+                        src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png"
+                        alt="">
+                    <img width="120"
+                        src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png"
+                        alt="">
+                </div>
+                <P class="font-weight-bold h6 mt-4">KEEP IN TOUCH</P>
+                <div style="display: flex; flex-wrap: wrap; flex-direction: row;">
+                    <img class="m-2" width="20"
+                        src="  https://constant.myntassets.com/web/assets/img/d2bec182-bef5-4fab-ade0-034d21ec82e31574604275433-fb.png"
+                        alt="">
+                    <img class="m-2" width="20"
+                        src="https://constant.myntassets.com/web/assets/img/f10bc513-c5a4-490c-9a9c-eb7a3cc8252b1574604275383-twitter.png"
+                        alt="">
+                    <img class="m-2" width="20"
+                        src="https://constant.myntassets.com/web/assets/img/a7e3c86e-566a-44a6-a733-179389dd87111574604275355-yt.png"
+                        alt="">
+                    <img class="m-2" width="20"
+                        src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png"
+                        alt="">
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row" style="width: 100%;">
+                    <div class="col-md-4">
+                        <img width="70"
+                            src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png"
+                            alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <p><span>100% ORIGINAL guarantee</span> for all products at myntra.com</p>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <img width="70"
+                            src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png"
+                            alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <span> Return within 30days</span> of receiving your order
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
